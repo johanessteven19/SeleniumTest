@@ -24,35 +24,95 @@
         <br><h1><center>Johanes Steven</center></h1>
         <h3><center>Little facts about me.</center></h3>
         <br><br>
-    <div id="accordion">
-    <h3>Current Activities</h3>
-    <div>
-        <p>
-        Currently a student at the International Program of Universitas Indonesia, majoring in Computer Science.</p>
-        <p>Also currently under lockdown.</p>
-    </div>
-    <h3>Organizational Experience</h3>
-    <div>
+        
         <ul>
-        <li> Part of Yamaha Smile Music Team that competed in Yamaha National Music Festival 2014 </li>
-        <li> XIA6 Drama Team - Cast Member</li>
-        <li> XIIA6 Drama Team - Cast Member</li>
+            <li>
+                    <button class="accordion" id="acc1"><font size="24">Current Activities</font></button>
+                    <div class="down">Down</div> 
+                    <div class="up">Up</div>
+                    <div class="panel" id="panel1">
+                        <br>
+                    <p>Currently a student at the International Program of Universitas Indonesia, majoring in Computer Science.</p><br>
+                    <p>Also currently under lockdown.</p><br>
+                    </div>
+            </li>
+
+            <li>
+                    <button class="accordion" id="acc2"><font size="24">Organizational Experience</font></button>
+                    <div class="down">Down</div> 
+                    <div class="up">Up</div>
+                    <div class="panel" id="panel2">
+                        <br>
+                             - Part of Yamaha Smile Music Team that competed in Yamaha National Music Festival 2014 <br>
+                             - XIA6 Drama Team - Cast Member <br>
+                             - XIIA6 Drama Team - Cast Member <br>
+                        <br>
+                    </div> 
+            </li>
+            
+            <li> 
+                    <button class="accordion" id="acc3"><font size="24">Committee Experience</font></button>
+                    <div class="down">Down</div> 
+                    <div class="up">Up</div>
+                    <div class="panel" id="panel3">
+                        <br>
+                             - XIA6 Drama Team - Props Committee Member <br>
+                             - XIIA6 Drama Team - Props Committee Member <br>
+                        <br>
+                    </div>
+            </li>
+
+            <li>
+                <button class="accordion" id="acc4"><font size="24">Achievements</font></button>
+                    <div class="down">Down</div> 
+                    <div class="up">Up</div>
+                    <div class="panel" id="panel4">
+                        <br>
+                             - 3rd Place at Yamaha National Music Festival 2014<br>
+                             - 5th Place at Sempoa SIP Competition<br>
+                        <br>
+                    </div>
+            </li>
+        
         </ul>
-    </div>
-    <h3>Commitee Experience</h3>
-    <div>
-        <ul>
-        <li> XIA6 Drama Team - Props Committee Member</li>
-        <li> XIIA6 Drama Team - Props Committee Member</li>
-        </ul>
-    </div>
-    <h3>Achievements</h3>
-    <div>
-        <ul>
-            <li>3rd Place at Yamaha National Music Festival 2014</li>
-            <li>5th Place at Sempoa SIP Competition</li>
-        </ul>
-    </div>
-    </div>
+        <script>
+            
+            
+            $(document).ready(function(){
+              
+                $("#acc1").click(function(){
+                $("#panel1").slideToggle();
+                $("#acc1").toggleClass("active")
+              });
+
+                $("#acc2").click(function(){
+                $("#panel2").slideToggle();
+                $("#acc2").toggleClass("active")
+              });
+
+                $("#acc3").click(function(){
+                $("#panel3").slideToggle();
+                $("#acc3").toggleClass("active")
+              });
+
+                $("#acc4").click(function(){
+                $("#panel4").slideToggle();
+                $("#acc4").toggleClass("active")
+              });
+
+              $(function() {
+                    $('.up').on('click', function(e) {
+                        var wrapper = $(this).closest('li')
+                        wrapper.insertBefore(wrapper.prev())
+                    })
+
+                    $('.down').on('click', function(e) {
+                        var wrapper = $(this).closest('li')
+                        wrapper.insertAfter(wrapper.next())
+                    })
+                })
+            });
+        </script>
     </body>
+
 </html>

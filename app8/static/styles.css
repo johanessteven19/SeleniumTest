@@ -14,7 +14,7 @@ body{
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-    background-color: #eee;
+    background-color: #addbff;
     color: #444;
     cursor: pointer;
     padding: 18px;
@@ -26,7 +26,7 @@ body{
   }
   
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .accordion:hover {
+  .active, .accordion:hover, .up:hover, .down:hover{
     background-color: #98bfe6;
   }
   
@@ -37,3 +37,28 @@ body{
     display: none;
     overflow: hidden;
   }
+
+  ul {
+    list-style-type: none;
+}
+
+.down {
+  cursor: pointer;
+  width: 7.5%;
+  height: 7.5%;
+  text-align: center;
+  background-color:#eee;
+  float: right;
+  
+
+} 
+
+.up {
+  cursor: pointer;
+  width: 7.5%;
+  height: 7.5%;
+  text-align: center;
+  background-color:#eee;
+  float: right;
+}
+
