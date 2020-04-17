@@ -25,7 +25,7 @@ SECRET_KEY = '+ai_^w!8e&*v*6axfgj9#j=w6@n87e-a=in!1zlr93)cc*e8e4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['story8jo.herokuapp.com',
+ALLOWED_HOSTS = ['story8j.herokuapp.com',
                  '127.0.0.1']
 
 
@@ -126,6 +126,4 @@ import django_heroku
 if '/app' in os.environ['HOME']:
     django_heroku.settings(locals())
 
-import dj_database_url
-if 'DATABASE_URL' in os.environ:
-    DATABASES = {'default': dj_database_url.config()}
+

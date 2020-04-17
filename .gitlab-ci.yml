@@ -32,10 +32,10 @@ Deployment:
     - gem install dpl
     - wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
   script:
-    - dpl --provider=heroku --app=story8jo --api-key=$HEROKU_API_KEY
+    - dpl --provider=heroku --app=story8j --api-key=$HEROKU_API_KEY
     - export HEROKU_API_KEY=$HEROKU_API_KEY
   environment:
     name: production
-    url: story8jo.herokuapp.com
+    url: https://story8j.herokuapp.com/
   only:
     - master
