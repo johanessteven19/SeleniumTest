@@ -40,9 +40,9 @@ class Story8FunctionalTest(TestCase):
         chrome_options.add_argument('--no-sandbox')        
         chrome_options.add_argument('--headless')
         chrome_options.add_argument('disable-gpu')
-        chrome_path = r'/usr/local/bin/chromedriver' #path from 'which chromedriver'
-        self.selenium = webdriver.Chrome(executable_path=chrome_path)
-        # self.selenium = webdriver.Chrome('./chromedriver', chrome_options=chrome_options)
+        # chrome_path = r'/usr/local/bin/chromedriver' #path from 'which chromedriver'
+        # self.selenium = webdriver.Chrome(executable_path=chrome_path)
+        self.selenium = webdriver.Chrome('./chromedriver', chrome_options=chrome_options)
         super(Story8FunctionalTest, self).setUp()
 
 
